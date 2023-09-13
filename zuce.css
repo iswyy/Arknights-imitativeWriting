@@ -1,0 +1,316 @@
+.zhuce{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* background-image: url("zhuceimg/background.87f99497.png"); */
+    width: 100%;
+    /* height: 641px; */
+    height: 100%;
+    background-image: url("/明日方舟/zhuceimg/background.87f99497.png");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-position: 0 -70px;
+  /* background-attachment: fixed; */
+  background-size: cover;
+
+}
+.top{
+    height: 64px;
+    width: 100%;
+    background-color: #fff;
+    /* border-bottom: 1px rgb(3, 3, 3) solid; */
+    box-shadow: 0px 3px 6px rgba(74, 74, 74, 0.493);
+    /* z-index: 9; */
+    text-align: center;
+}
+.biaozhi{
+    width: 101px;
+    height: 48px;
+    margin-top: 8px;
+    margin-left: 80px;
+}
+.kefu{
+    display: inline-block;
+    text-align: center;
+    font-family: 黑体;
+    float: right;
+    margin-right: 20px;
+    margin-top: 8px;
+}
+.kefu img{
+    width: 32px;
+    height: 32px;
+}
+.kefu p{
+    font-size: 12.8px;
+}
+.mid{
+    width: 100%;
+    height: 520px;
+    position: relative;
+    display: table;
+}
+.jm{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+    height: 238px;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-radius: 21px;
+    padding: 32px;
+    margin: auto;
+    margin-top: 60px;
+    box-shadow: 0 0 10px #707070a2;
+    z-index: 2;
+}
+.biaoti{
+    color: #158fc5;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.input{
+text-align: center;
+    height: 45px;
+    margin-top: 10px;
+}
+.input input{
+    /* height: 50px; */
+    font-size: 15px;
+    /* width: 256px; */
+}
+.mid input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px #adadada6 solid;
+    color: #313131;
+    /* display: none; */
+}
+.jm a{
+    color: #1c9cd3;
+    font-family: 微软雅黑;
+    font-size: 13px;
+    margin-top: 20px;
+}
+.input2{
+    width: 256px;
+    position: relative;
+    /* top: 80px; */
+    /* opacity: 0; */
+    display: none;
+    /* z-index: 0; */
+}
+.input2 input[type="password"]{
+    width: 50%;
+    position: relative;
+    left: -62px;
+}
+.input2-but{
+    width: 70px;
+    height: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: content-box;
+    position: relative;
+    top: -35px;
+    left: 69px;
+}
+button{
+    background-color: #158fc5;
+    border: none;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: bolder;
+}
+.queding{
+    display: block;
+    width: 260px;
+    /* height: 60px; */
+    margin-top: 20px;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.jm-back{
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+    height: 340px;
+    padding: 32px;
+    background-color:rgba(255, 255, 255, 0.757) ;
+    margin: auto;
+    border-radius: 21px;
+    position: absolute;
+    top: 30px;
+    left: 472px;
+    box-shadow: 0 0 10px #707070a2;
+    
+    opacity: 0;
+}
+
+.jm-back div:nth-of-type(4) input{
+    width: 105px;
+    /* height: 16px; */
+   margin-right: 15px;
+}
+.jm-back div:nth-of-type(4) button{
+    width: 80px;
+    height: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: content-box;
+}
+.zc{
+    font-size: 13px;
+    margin-top: 10px;
+}
+.zc a{
+    color: #158fc5;
+}
+.zc input{
+    display: none;
+}
+#ty + label{
+    background-color: rgba(255, 255, 255, 0);
+    border:1px solid #080808;
+    width:11px;
+    height:11px;
+    line-height: 20px;
+    float: left;
+    margin-top: 2px;
+}
+#ty:checked + label{
+    background-color: #158fc5;
+}
+
+.xz{
+    width: 119px;
+    height: 29px;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 18px;
+    margin-top: 95px;
+    padding: 2px;
+    padding-top: 7px;
+}
+.xz input{
+    display: none;
+}
+.xz input + label{
+    color:rgb(5, 5, 5);
+    font-weight: bolder;
+    font-size: 16px;
+}
+.xz input:checked + label {
+    color: #158fc5;
+    font-size: 18px;
+}
+.xz span{
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.false{
+    font-size: 12px;
+    color: red;
+    float: left;
+    /* opacity: 0; */
+    /* display: none; */
+
+}
+.und{
+    height: 68.5px;
+    width: 100%;
+background-color: #fff;
+text-align: center;
+}
+.content{
+    height: 68.5px;
+    margin-top: 10px;
+    font-size: 10px;
+    font-family: 微软雅黑;
+}
+.content img:nth-of-type(1){
+    width: 15px;
+    height: 15px;
+}
+.content img:nth-of-type(2){
+    width: 15px;
+    height: 15px;
+}
+@keyframes rotateStart{
+    from{
+        transform: perspective(500px) rotate3d(0,1,0,360deg);
+        opacity: 1;
+    }
+    40% {
+        transform: perspective(5000px) rotate3d(0, 1, 0, 330deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: perspective(5000px) rotate3d(0, 1, 0, 300deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: perspective(5000px) rotate3d(0, 1, 0, 270deg);
+        opacity: 0;
+    }
+}
+@keyframes rotateEnd{
+    from{
+        transform: perspective(5000px) rotate3d(0,1,0,450deg);
+        opacity: 0;
+    }
+    40% {
+        transform: perspective(5000px) rotate3d(0, 1, 0, 425deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: perspective(5000px) rotate3d(0, 1, 0, 400deg);
+        opacity: 1;
+    }
+    /* 80%{
+        transform: perspective(5000px) rotate3d(0, 1, 0, 380deg);
+        opacity: 1;
+    } */
+    to {
+        transform: perspective(5000px) rotate3d(0, 1, 0, 360deg);
+        opacity: 1;
+    }
+}
+#jm{
+    animation: rotateStart 0.8s linear;
+    
+    animation-fill-mode: both;
+}
+#jm-back{
+    animation: rotateEnd 0.8s linear; 
+    
+    animation-fill-mode: both;
+}
+.input .border{
+    width: 0px;
+    height: 2px;
+    background-color: #158fc5;
+    position: relative;
+    top: -2px;
+
+}
+#catch{
+    background-color: rgb(118, 118, 118);
+}
+#catch:hover{
+    background-color: rgb(94, 94, 94);
+}

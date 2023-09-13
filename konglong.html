@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="runner-container" class="runner-container offline" style="height: 200px; width: 600px; background: #fff;">
+    &nbsp;
+</div>
+
+
+<img id="sprite" style="display: none;"
+     src="data:image/png;base64,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"
+     alt="test"/>
+
+</body>
+
+<style>
+
+</style>
+
+<script type="text/javascript">
+
+// 创建canvas节点
+    var canvas = document.createElement('canvas'),
+        a = document.getElementById('runner-container'),
+        ctx = canvas.getContext('2d');
+    canvas.id = 'c';
+    canvas.width = 600;
+    canvas.height = 150;
+    a.appendChild(canvas);
+
+    //各图在精灵图中的坐标
+    var spriteDefinition = {
+            CACTUS_LARGE: {x: 332, y: 2},	//大仙人掌
+            CACTUS_SMALL: {x: 228, y: 2},	//小仙人掌
+            CLOUD: {x: 86, y: 2},			//云
+            HORIZON: {x: 2, y: 54},			//地面
+            MOON: {x: 484, y: 2},			//月亮
+            PTERODACTYL: {x: 134, y: 2},	//翼龙
+            RESTART: {x: 2, y: 2},			//重新开始按钮
+            TEXT_SPRITE: {x: 655, y: 2},	//分数
+            TREX: {x: 848, y: 2},			//霸王龙
+            STAR: {x: 645, y: 2}			//星星
+        },
+        FPS = 60,//FPS每秒传真率(刷新率)
+        DEFAULT_WIDTH = 600,//游戏画布宽度
+
+        imgSprite = document.getElementById('sprite');//获取图片
+// 运动配置
+    Runner.config = {
+        // 加速度
+        ACCELERATION: 0.001,
+        // 云朵的速度
+        BG_CLOUD_SPEED: 0.2,
+        BOTTOM_PAD: 10,
+        // 清理时间
+        CLEAR_TIME: 3000,
+        // 云朵出现的频率
+        CLOUD_FREQUENCY: 0.5,
+        GAMEOVER_CLEAR_TIME: 750,
+        GAP_COEFFICIENT: 0.6,
+        GRAVITY: 0.6,
+        INITIAL_JUMP_VELOCITY: 12,
+        INVERT_FADE_DURATION: 10000,	//夜晚持续时间
+        INVERT_DISTANCE: 700,	//每700距离进行昼夜交替
+        MAX_CLOUDS: 6,			//云最大数量
+        // 每组障碍物的最大数量
+        MAX_OBSTACLE_LENGTH: 3,
+        // 相邻障碍物类型的最大重复数
+        MAX_OBSTACLE_DUPLICATION: 2,
+        // 最大速度
+        MAX_SPEED: 13,
+        // 起跳最小高度
+        MIN_JUMP_HEIGHT: 35,
+        MOBILE_SPEED_COEFFICIENT: 1.2,
+        // RESOURCE_TEMPLATE_ID: 'audio-resources',
+        SPEED: 6,
+        SPEED_DROP_COEFFICIENT: 3
+    };
+// 尺寸
+    Runner.defaultDimensions = {
+        HEIGHT: 150,//高150
+        WIDTH: 600//宽600
+    };
+// 类名
+    Runner.classes = {
+        CANVAS: 'runner-canvas',
+        CONTAINER: 'runner-container',
+        CRASHED: 'crashed',
+        ICON: 'icon-offline',
+        INVERTED: 'inverted',
+        SNACKBAR: 'snackbar',
+        SNACKBAR_SHOW: 'snackbar-show',
+        TOUCH_CONTROLLER: 'controller'
+    };
+
+
+    Runner.keycodes = {
+        JUMP: {'38': 1, '32': 1},  // 向上，空格键
+        DUCK: {'40': 1},  // 向下
+        RESTART: {'13': 1}  // Enter
+    };
+// 事件
+    Runner.events = {
+        ANIM_END: 'webkitAnimationEnd',
+        // 点击
+        CLICK: 'click',
+        // 按下按键
+        KEYDOWN: 'keydown',
+        // 按键弹起
+        KEYUP: 'keyup',
+        // 鼠标按下
+        MOUSEDOWN: 'mousedown',
+        // 鼠标弹起
+        MOUSEUP: 'mouseup',
+        // 刷新
+        RESIZE: 'resize',
+        // 可见性更改
+        VISIBILITY: 'visibilitychange',
+        // 失焦
+        BLUR: 'blur',
+        // 聚焦
+        FOCUS: 'focus',
+        // 加载
+        LOAD: 'load'
+    };
+
+    function Runner(outerContainerId, opt_config) {
+        if (Runner.instance_) {
+            return Runner.instance_;
+        }
+        // 启动的实例
+        Runner.instance_ = this;
+        this.containerEl = null;
+        this.snackbarEl = null;
+        // 配置
+        this.config = opt_config || Runner.config;
+        // 尺寸
+        this.dimensions = Runner.defaultDimensions;
+        this.canvas = null;
+        this.ctx = null;
+
+        this.tRex = null;
+        this.distanceMeter = null;
+        this.distanceRan = 0;
+        this.highestScore = 0;
+
+        this.time = 0;
+        this.runningTime = 0;
+        this.msPerFrame = 1000 / FPS;
+        this.currentSpeed = this.config.SPEED;
+
+        this.obstacles = [];  //障碍物存储数组
+
+        this.started = false;
+        this.activated = false;
+        this.crashed = false;
+        this.paused = false;
+        this.inverted = false;
+        this.invertTimer = 0;
+        this.resizeTimerId_ = null;
+
+        this.playCount = 0;
+
+        // Images.
+        this.images = {};
+        this.imagesLoaded = 0;
+
+        this.loadImages();
+    }
+
+    Runner.prototype = {
+        loadImages: function () {
+            this.spriteDef = spriteDefinition;
+            this.init();
+        },
+        setSpeed: function (opt_speed) {
+            if (opt_speed) this.currentSpeed = opt_speed;
+        },
+        init: function () {
+            this.setSpeed();
+            this.canvas = c;
+            this.ctx = ctx;
+            this.ctx.fillStyle = '#f7f7f7';
+            this.ctx.fill();
+
+            this.horizon = new Horizon(this.canvas, this.spriteDef, this.dimensions,
+                this.config.GAP_COEFFICIENT);
+
+            this.distanceMeter = new DistanceMeter(this.canvas, this.spriteDef.TEXT_SPRITE, this.dimensions.WIDTH);
+
+            this.tRex = new Trex(this.canvas, this.spriteDef.TREX);
+
+            this.startListening();
+            this.update();
+        },
+        //开场动画
+        playIntro: function () {
+            if (!this.started && !this.crashed) {
+                this.playingIntro = true;
+                this.tRex.playingIntro = true;
+                // CSS 动画定义，地面缓缓展开
+                var keyframes = '@keyframes intro { ' +
+                    'from { width:' + Trex.config.WIDTH + 'px }' +
+                    'to { width: ' + this.dimensions.WIDTH + 'px }' +
+                    '}';
+                document.styleSheets[0].insertRule(keyframes, 0);
+                this.containerEl = document.getElementById('runner-container');
+                this.containerEl.addEventListener('webkitAnimationEnd',
+                    this.startGame.bind(this));
+
+                this.containerEl.style.webkitAnimation = 'intro .4s ease-out 1 both';
+                this.containerEl.style.width = this.dimensions.WIDTH + 'px';
+
+                this.activated = true;
+                this.started = true;
+            } else if (this.crashed) {
+                this.restart();
+            }
+        },
+        startGame: function () {
+            this.runningTime = 0;
+            this.playingIntro = false;
+            this.tRex.playingIntro = false;
+            this.containerEl.style.webkitAnimation = '';
+            this.playCount++;
+            // bind() 函数会创建一个新函数（称为绑定函数），
+            // 新函数与被调函数（绑定函数的目标函数）具有相同的函数体（在 ECMAScript 5 规范中内置的call属性）。
+            // 当目标函数被调用时 this 值绑定到 bind() 的第一个参数，该参数不能被重写。
+            // 绑定函数被调用时，bind() 也接受预设的参数提供给原函数。一个绑定函数也能使用new操作符创建对象：
+            // 这种行为就像把原函数当成构造器。提供的 this 值被忽略，同时调用时的参数被提供给模拟函数。
+            document.addEventListener('visibilitychange', this.onVisibilityChange.bind(this));
+            // 窗口失去焦点时游戏暂停
+            window.addEventListener('blur', this.onVisibilityChange.bind(this));
+            window.addEventListener('focus', this.onVisibilityChange.bind(this));
+        },
+        clearCanvas: function () {
+            this.ctx.clearRect(0, 0, this.dimensions.WIDTH, this.dimensions.HEIGHT);
+        },
+        //todo
+        update: function () {
+            this.drawPending = false;
+
+            var now = getTimeStamp();
+            var deltaTime = now - (this.time || now);
+            this.time = now;
+
+            if (this.activated) {
+
+                this.clearCanvas();
+
+                if (this.tRex.jumping) {
+                    this.tRex.updateJump(deltaTime);
+                }
+
+                this.runningTime += deltaTime;
+                // 一定时间后再出现怪物
+                var hasObstacles = this.runningTime > this.config.CLEAR_TIME;
+                //如果是第一次跳跃并且没有播放开场动画，则播放开场动画
+                if (this.tRex.jumpCount == 1 && !this.playingIntro) {
+                    this.playIntro();
+                }
+
+                if (this.playingIntro) {
+                    this.horizon.update(0, this.currentSpeed, hasObstacles);
+                } else {
+                    deltaTime = !this.started ? 0 : deltaTime;
+                    this.horizon.update(deltaTime, this.currentSpeed, hasObstacles,
+                        this.inverted);
+                }
+                var collision = hasObstacles &&
+                    checkForCollision(this.horizon.obstacles[0], this.tRex);
+
+                if (!collision) {
+                    this.distanceRan += this.currentSpeed * deltaTime / this.msPerFrame;
+
+                    if (this.currentSpeed < this.config.MAX_SPEED) {
+                        this.currentSpeed += this.config.ACCELERATION;
+                    }
+                } else {
+                    this.gameOver();
+                }
+
+                var playAchievementSound = this.distanceMeter.update(deltaTime,
+                // 取整函数
+                    Math.ceil(this.distanceRan));
+
+                //若夜晚持续时间大于设定值则变为白天
+                if (this.invertTimer > this.config.INVERT_FADE_DURATION) {
+                    this.invertTimer = 0;
+                    this.invertTrigger = false;
+                    this.invert();
+                } else if (this.invertTimer) {
+                    this.invertTimer += deltaTime;
+                } else {
+                    var actualDistance =
+                        this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan));
+
+                    if (actualDistance > 0) {
+                        this.invertTrigger = !(actualDistance %
+                            this.config.INVERT_DISTANCE);
+
+                        if (this.invertTrigger && this.invertTimer === 0) {
+                            this.invertTimer += deltaTime;
+                            this.invert();
+                        }
+                    }
+                }
+            }
+            if (!this.crashed) {
+                this.tRex.update(deltaTime);
+                this.raq();
+            }
+        },
+        handleEvent: function (e) {
+            return (function (evtType, events) {
+                switch (evtType) {
+                    case events.KEYDOWN:
+                    case events.TOUCHSTART:
+                    case events.MOUSEDOWN:
+                        this.onKeyDown(e);
+                        break;
+                    case events.KEYUP:
+                    case events.TOUCHEND:
+                    case events.MOUSEUP:
+                        this.onKeyUp(e);
+                        break;
+                }
+            }.bind(this))(e.type, Runner.events);
+        },
+        // 注册键盘事件
+        startListening: function () {
+            document.addEventListener(Runner.events.KEYDOWN, this);
+            document.addEventListener(Runner.events.KEYUP, this);
+            document.addEventListener(Runner.events.MOUSEDOWN, this);
+            document.addEventListener(Runner.events.MOUSEUP, this);
+        },
+        stopListening: function () {
+            document.removeEventListener(Runner.events.KEYDOWN, this);
+            document.removeEventListener(Runner.events.KEYUP, this);
+            document.removeEventListener(Runner.events.MOUSEDOWN, this);
+            document.removeEventListener(Runner.events.MOUSEUP, this);
+        },
+        onKeyDown: function (e) {
+
+            if (e.target != this.detailsButton) {
+                if (!this.crashed && Runner.keycodes.JUMP[e.keyCode]) {
+                    e.preventDefault();
+                    if (!this.activated) {
+                        this.activated = true;
+                    }
+                    if (!this.tRex.jumping && !this.tRex.ducking) {
+                        this.tRex.startJump(this.currentSpeed);
+                    }
+                }
+            }
+            if (this.activated && !this.crashed && Runner.keycodes.DUCK[e.keyCode]) {
+
+                e.preventDefault();
+                if (this.tRex.jumping) {
+                    // 加速下落, activated only when jump key is not pressed.
+                    this.tRex.setSpeedDrop();
+                } else if (!this.tRex.jumping && !this.tRex.ducking) {
+                    // 闪避
+                    this.tRex.setDuck(true);
+                }
+            }
+        },
+        onKeyUp: function (e) {
+            var keyCode = String(e.keyCode);
+            var isjumpKey = Runner.keycodes.JUMP[keyCode] ||
+                e.type == Runner.events.TOUCHEND ||
+                e.type == Runner.events.MOUSEDOWN;
+
+            if (this.isRunning() && isjumpKey) {
+                e.preventDefault();
+                this.tRex.endJump();
+            } else if (Runner.keycodes.DUCK[keyCode]) {
+                e.preventDefault();
+                this.tRex.speedDrop = false;
+                // 取消闪避
+                this.tRex.setDuck(false);
+            } else if (this.crashed) {
+                e.preventDefault();
+                // 在允许跳转键重新启动之前，请检查是否已经过足够的时间
+                var deltaTime = getTimeStamp() - this.time;
+
+                if (Runner.keycodes.RESTART[keyCode] || this.isLeftClickOnCanvas(e) ||
+                    (deltaTime >= this.config.GAMEOVER_CLEAR_TIME &&
+                        Runner.keycodes.JUMP[keyCode])) {
+                    e.preventDefault();
+                    this.restart();
+                }
+            } else if (this.paused && isjumpKey) {
+                // 重置跳转状态
+                e.preventDefault();
+                this.tRex.reset();
+                this.play();
+            }
+        },
+        isLeftClickOnCanvas: function (e) {
+            return e.button != null && e.button < 2 &&
+                e.type == Runner.events.MOUSEUP && e.target == this.canvas;
+        },
+        raq: function () {
+            if (!this.drawPending) {
+                this.drawPending = true;
+                this.raqId = requestAnimationFrame(this.update.bind(this));
+            }
+        },
+        isRunning: function () {
+            return !!this.raqId;
+        },
+        gameOver: function () {
+            //vibrate(200);
+
+            this.stop();
+            this.crashed = true;
+            this.distanceMeter.acheivement = false;
+
+            this.tRex.update(100, Trex.status.CRASHED);
+
+            // 游戏失败界面
+            if (!this.gameOverPanel) {
+                this.gameOverPanel = new GameOverPanel(this.canvas,
+                    this.spriteDef.TEXT_SPRITE, this.spriteDef.RESTART,
+                    this.dimensions);
+            } else {
+                this.gameOverPanel.draw();
+            }
+
+            // 更新高分
+            if (this.distanceRan > this.highestScore) {
+                this.highestScore = Math.ceil(this.distanceRan);
+                this.distanceMeter.setHighScore(this.highestScore);
+            }
+
+            // 重置时钟。
+            this.time = getTimeStamp();
+        },
+        stop: function () {
+            this.activated = false;
+            this.paused = true;
+            cancelAnimationFrame(this.raqId);
+            this.raqId = 0;
+        },
+        play: function () {
+            if (!this.crashed) {
+                this.activated = true;
+                this.paused = false;
+                this.tRex.update(0, Trex.status.RUNNING);
+                this.time = getTimeStamp();
+                this.update();
+            }
+        },
+        // GameOver后，按下Spacebar游戏重新开始，restart方法负责将游戏各个元素或数据重置
+        restart: function () {
+            if (!this.raqId) {
+                this.playCount++;
+                this.runningTime = 0;
+                this.activated = true;
+                this.crashed = false;
+                this.distanceRan = 0;
+                this.setSpeed(this.config.SPEED);
+                this.time = getTimeStamp();
+                this.containerEl.classList.remove(Runner.classes.CRASHED);
+                this.clearCanvas();
+                this.distanceMeter.reset(this.highestScore);
+                this.horizon.reset();
+                this.tRex.reset();
+                this.invert(true);
+                this.update();
+            }
+        },
+        // 游戏界面失去焦点时暂停游戏
+        onVisibilityChange: function (e) {
+            if (document.hidden || document.webkitHidden || e.type == 'blur' ||
+                document.visibilityState != 'visible') {
+                this.stop();
+            } else if (!this.crashed) {
+                this.tRex.reset();
+                this.play();
+            }
+        },
+        invert: function (reset) {
+            if (reset) {
+                a.classList.toggle(Runner.classes.INVERTED, this.invertTrigger);
+                //document.body.classList.toggle(Runner.classes.INVERTED,false);
+                this.invertTimer = 0;
+                this.inverted = false;
+            } else {
+                this.inverted = a.classList.toggle(Runner.classes.INVERTED, this.invertTrigger);
+
+                //this.inverted = document.body.classList.toggle(Runner.classes.INVERTED,this.invertTrigger);
+            }
+        }
+    };
+
+    window['Runner'] = Runner;
+// 恐龙和障碍物碰撞后，游戏结束，游戏界面显示gameover面板，该功能由GameOverPanel构造函数实现
+    GameOverPanel.dimensions = {
+        TEXT_X: 0,
+        TEXT_Y: 13,
+        TEXT_WIDTH: 191,
+        TEXT_HEIGHT: 11,
+        RESTART_WIDTH: 36,
+        RESTART_HEIGHT: 32
+    };
+
+    function GameOverPanel(canvas, textImgPos, restartImgPos, dimensions) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.canvasDimensions = dimensions;
+        this.textImgPos = textImgPos;
+        this.restartImgPos = restartImgPos;
+        this.draw();
+    }
+
+
+    GameOverPanel.prototype = {
+        /**
+         * 更新面板尺寸。
+         * @param {number} width 新的canvas宽度.
+         * @param {number} opt_height 自选 新的canvas高度.
+         */
+        updateDimensions: function (width, opt_height) {
+            this.canvasDimensions.WIDTH = width;
+            if (opt_height) {
+                this.canvasDimensions.HEIGHT = opt_height;
+            }
+        },
+
+        /**
+         * 画这个面板
+         */
+        draw: function () {
+            var dimensions = GameOverPanel.dimensions;
+
+            var centerX = this.canvasDimensions.WIDTH / 2;
+
+            // 通过文本进行游戏
+            var textSourceX = dimensions.TEXT_X;
+            var textSourceY = dimensions.TEXT_Y;
+            var textSourceWidth = dimensions.TEXT_WIDTH;
+            var textSourceHeight = dimensions.TEXT_HEIGHT;
+
+            var textTargetX = Math.round(centerX - (dimensions.TEXT_WIDTH / 2));
+            var textTargetY = Math.round((this.canvasDimensions.HEIGHT - 25) / 3);
+            var textTargetWidth = dimensions.TEXT_WIDTH;
+            var textTargetHeight = dimensions.TEXT_HEIGHT;
+
+            var restartSourceWidth = dimensions.RESTART_WIDTH;
+            var restartSourceHeight = dimensions.RESTART_HEIGHT;
+            var restartTargetX = centerX - (dimensions.RESTART_WIDTH / 2);
+            var restartTargetY = this.canvasDimensions.HEIGHT / 2;
+
+
+            textSourceX += this.textImgPos.x;
+            textSourceY += this.textImgPos.y;
+
+            // 画出
+            this.ctx.drawImage(imgSprite,
+                textSourceX, textSourceY, textSourceWidth, textSourceHeight,
+                textTargetX, textTargetY, textTargetWidth, textTargetHeight);
+
+            // 重新开始的按钮
+            this.ctx.drawImage(imgSprite,
+                this.restartImgPos.x, this.restartImgPos.y,
+                restartSourceWidth, restartSourceHeight,
+                restartTargetX, restartTargetY, dimensions.RESTART_WIDTH,
+                dimensions.RESTART_HEIGHT);
+        }
+    };
+
+
+    //地面
+    function HorizonLine(canvas, spritePos) {
+        this.spritePos = spritePos;
+        this.canvas = canvas;
+        this.ctx = canvas.getContext("2d");
+        this.sourceDimensions = {};
+        this.dimensions = HorizonLine.dimensions;
+                // 在精灵图坐标为2处和602处分别为不同的地形
+        this.sourceXPos = [this.spritePos.x, this.spritePos.x + this.dimensions.WIDTH];
+        this.xPos = [];//地面在画布中的x坐标
+        this.yPos = 0;//地面在画布中的y坐标
+        this.bumpThreshold = 0.5;	//随机地形系数
+
+        this.setSourceDimesions();
+        this.draw();
+    }
+
+    HorizonLine.dimensions = {
+        WIDTH: 600,	//宽600
+        HEIGHT: 12,	//高12像素
+        YPOS: 127	//在画布中的位置
+    };
+    // HorizonLine原型中的方法
+    HorizonLine.prototype = {
+        setSourceDimesions: function () {
+            for (var dimension in HorizonLine.dimensions) {
+                this.sourceDimensions[dimension] = HorizonLine.dimensions[dimension];
+                this.dimensions[dimension] = HorizonLine.dimensions[dimension];
+            }
+            //地面在画布上的位置
+            this.xPos = [0, HorizonLine.dimensions.WIDTH];//0,600
+            this.yPos = HorizonLine.dimensions.YPOS;
+        },
+        //随机地形
+        getRandomType: function () {
+            return Math.random() > this.bumpThreshold ? this.dimensions.WIDTH : 0;
+        },
+        draw: function () {
+            //要绘制的图像，图像将要被绘制的区域的左上角的坐标，图像所要绘制区域的大小，所要绘制的图像区域的左上角坐标，图像区域所要绘制的画布大小
+            this.ctx.drawImage(imgSprite,
+                this.sourceXPos[0], this.spritePos.y,
+                this.sourceDimensions.WIDTH, this.sourceDimensions.HEIGHT,
+                this.xPos[0], this.yPos,
+                this.dimensions.WIDTH, this.dimensions.HEIGHT);
+
+            this.ctx.drawImage(imgSprite,
+                this.sourceXPos[1], this.spritePos.y,
+                this.sourceDimensions.WIDTH, this.sourceDimensions.HEIGHT,
+                this.xPos[1], this.yPos,
+                this.dimensions.WIDTH, this.dimensions.HEIGHT);
+
+        },
+        updateXPos: function (pos, increment) {
+            var line1 = pos,
+                line2 = pos === 0 ? 1 : 0;
+
+            this.xPos[line1] -= increment;
+            this.xPos[line2] = this.xPos[line1] + this.dimensions.WIDTH;
+// 若第一段地面完全移出canvas外
+            if (this.xPos[line1] <= -this.dimensions.WIDTH) {
+                 // 则将其移动至canvas外右侧
+                this.xPos[line1] += this.dimensions.WIDTH * 2;
+               // 同时将第二段地面移动至canvas内
+                this.xPos[line2] = this.xPos[line1] - this.dimensions.WIDTH;
+               // 随机选择地形
+                this.sourceXPos[line1] = this.getRandomType() + this.spritePos.x;
+            }
+        },
+        update: function (deltaTime, speed) {
+            //FPS每秒传真率(刷新率)
+            var increment = Math.floor(speed * (FPS / 1000) * deltaTime);
+            if (this.xPos[0] <= 0) {
+               // 交换地面一和地面二
+                this.updateXPos(0, increment);
+            } else {
+                this.updateXPos(1, increment);
+            }
+            this.draw();
+        },
+        reset: function () {
+            this.xPos[0] = 0;
+            this.xPos[1] = HorizonLine.dimensions.WIDTH;
+        }
+    };
+
+
+    //云
+    Cloud.config = {
+        HEIGHT: 14,//云朵sprite的高度
+        MAX_CLOUD_GAP: 400,//两朵云之间最大的间隙
+        MAX_SKY_LEVEL: 30,//云朵 的最大高度
+        MIN_CLOUD_GAP: 100,//两朵云之间的最小间隙
+        MIN_SKY_LEVEL: 71,//云朵的最小高度
+        WIDTH: 46,//云朵sprite的宽度
+    };
+// 获取随机数的方法
+    function getRandomNum(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function getTimeStamp() {
+        return performance.now();
+    }
+
+    function Cloud(canvas, spritePos, containerWidth) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext("2d");
+        this.spritePos = spritePos;
+        this.containerWidth = containerWidth;
+        this.xPos = containerWidth;//云朵初始x坐标在屏幕外
+        this.yPos = 0;//云朵初始高度
+        this.remove = false;//是否移除
+        //云间隙400-100
+        this.cloudGap = getRandomNum(Cloud.config.MIN_CLOUD_GAP, Cloud.config.MAX_CLOUD_GAP);
+        this.init();
+    }
+
+    Cloud.prototype = {
+        init: function () {
+            //云的高度随机30-71
+            this.yPos = getRandomNum(Cloud.config.MAX_SKY_LEVEL, Cloud.config.MIN_SKY_LEVEL);
+            this.draw();
+        },
+        draw: function () {
+            // 不使用save和restore下一次绘制会在第一次绘制的基础上继续绘制，添加过后第二次绘制会回归初始化
+            this.ctx.save();
+            var sourceWidth = Cloud.config.WIDTH,
+                sourceHeight = Cloud.config.HEIGHT;
+
+            this.ctx.drawImage(imgSprite,
+                this.spritePos.x, this.spritePos.y,
+                sourceWidth, sourceHeight,
+                this.xPos, this.yPos,
+                sourceWidth, sourceHeight);
+
+            this.ctx.restore();
+        },
+        update: function (speed) {
+            // 仅绘制符合条件的云朵
+            if (!this.remove) {
+                //向左移动
+                this.xPos -= Math.ceil(speed);
+                this.draw();
+
+                if (!this.isVisible()) {
+                    this.remove = true;
+                }
+            }
+        },
+        //判断是否移出屏幕外
+        isVisible: function () {
+            return this.xPos + Cloud.config.WIDTH > 0;
+        }
+    };
+
+    //夜晚
+    //todo
+    NightMode.config = {
+        FADE_SPEED: 0.035,	//淡入淡出速度
+        HEIGHT: 40,	//月亮高度
+        MOON_SPEED: 0.25,	//月亮移动速度
+        NUM_STARS: 2,	//星星数量
+        STAR_SIZE: 9,	//星星宽度
+        STAR_SPEED: 0.3,//星星速度
+        STAR_MAX_Y: 70,	//星星在画布上出现的位置
+        WIDTH: 20	//半个月度宽度
+    };
+    // 月亮在不同时期有不同的位置
+    NightMode.phases = [140, 120, 100, 60, 40, 20, 0];
+
+    function NightMode(canvas, spritePos, containerWidth) {
+        this.spritePos = spritePos;
+        this.canvas = canvas;
+        this.ctx = canvas.getContext("2d");
+        this.containerWidth = containerWidth;
+        this.xPos = containerWidth - 50;	//月亮的x坐标
+        this.yPos = 30;	//月亮的y坐标
+        this.currentPhase = 0;
+        this.opacity = 0;
+        this.stars = [];	//用于存储星星
+        this.drawStars = false;//是否绘制星星
+        this.placeStars();	//放置星星
+    }
+
+    NightMode.prototype = {
+        update: function (activated) {
+            // 若夜晚模式处于激活状态并且opacity=0时
+            // 对月亮周期进行更新
+            if (activated && this.opacity == 0) {
+                this.currentPhase++;
+                if (this.currentPhase >= NightMode.phases.length) {
+                    this.currentPhase = 0;
+                }
+            }
+
+            //淡入淡出
+            if (activated && (this.opacity < 1 || this.opacity == 0)) {
+                this.opacity += NightMode.config.FADE_SPEED;
+            } else if (this.opacity > 0) {
+                this.opacity -= NightMode.config.FADE_SPEED;
+            }
+
+            //当opacity大于0时移动月亮
+            if (this.opacity > 0) {
+                this.xPos = this.updateXPos(this.xPos, NightMode.config.MOON_SPEED);
+
+                //移动星星
+                if (this.drawStars) {
+                    for (var i = 0; i < NightMode.config.NUM_STARS; i++) {
+                        this.stars[i].x = this.updateXPos(this.stars[i].x, NightMode.config.STAR_SPEED);
+                    }
+                }
+                this.draw();
+            } else {
+                this.opacity = 0;
+                this.placeStars();
+            }
+            this.drawStars = true;
+        },
+        updateXPos: function (currentPos, speed) {
+            if (currentPos < -NightMode.config.WIDTH) {
+                currentPos = this.containerWidth;
+            } else {
+                currentPos -= speed;
+            }
+            return currentPos;
+        },
+        draw: function () {
+            // 周期为3时画满月
+            var moonSourceWidth = this.currentPhase == 3 ? NightMode.config.WIDTH * 2 :
+                NightMode.config.WIDTH;
+            var moonSourceHeight = NightMode.config.HEIGHT;
+        //    从精灵图上获取月亮的正确形状
+            var moonSourceX = this.spritePos.x + NightMode.phases[this.currentPhase];
+            var moonOutputWidth = moonSourceWidth;
+            var starSize = NightMode.config.STAR_SIZE;
+            var starSourceX = spriteDefinition.STAR.x;
+
+            this.ctx.save();
+            // 画布的透明度随之变化
+            this.ctx.globalAlpha = this.opacity;
+
+            if (this.drawStars) {
+                for (var i = 0; i < NightMode.config.NUM_STARS; i++) {
+                    this.ctx.drawImage(imgSprite,
+                        starSourceX, this.stars[i].sourceY,
+                        starSize, starSize,
+                        Math.round(this.stars[i].x), this.stars[i].y,
+                        NightMode.config.STAR_SIZE, NightMode.config.STAR_SIZE);
+                }
+            }
+
+            this.ctx.drawImage(imgSprite,
+                moonSourceX, this.spritePos.y,
+                moonSourceWidth, moonSourceHeight,
+                Math.round(this.xPos), this.yPos,
+                moonOutputWidth, NightMode.config.HEIGHT);
+
+            this.ctx.globalAlpha = 1;
+            this.ctx.restore();
+        },
+        placeStars: function () {
+            // 讲画布分为若干组
+            var segmentSize = Math.round(this.containerWidth / NightMode.config.NUM_STARS);
+            for (var i = 0; i < NightMode.config.NUM_STARS; i++) {
+                this.stars[i] = {};
+                // 每组星星位置随机
+                this.stars[i].x = getRandomNum(segmentSize * i, segmentSize * (i + 1));
+                this.stars[i].y = getRandomNum(0, NightMode.config.STAR_MAX_Y);
+                this.stars[i].sourceY = spriteDefinition.STAR.y + NightMode.config.STAR_SIZE * i;
+            }
+        },
+        reset: function () {
+            this.currentPhase = 0;
+            this.opacity = 0;
+            this.update(false);
+        }
+    };
+
+    Horizon.config = {
+        BG_CLOUD_SPEED: 0.2,
+        BUMPY_THRESHOLD: .3,
+        CLOUD_FREQUENCY: .5,//云朵出现频率
+        HORIZON_HEIGHT: 16,
+        MAX_CLOUDS: 6//最多云朵数量
+    };
+
+    //地形
+    function Horizon(canvas, spritePos, dimensions, gapCoefficient) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext("2d");
+        this.config = Horizon.config;
+        this.dimensions = dimensions;
+        this.gapCoefficient = gapCoefficient;
+        //障碍物列表
+        this.obstacles = [];//障碍物存储数组
+        this.obstacleHistory = [];//记录障碍物数组中障碍物的类型
+        this.horizonOffsets = [0, 0];
+        this.cloudFrequency = this.config.CLOUD_FREQUENCY;
+        this.spritePos = spritePos;
+        this.nightMode = null;
+
+        //云
+        this.clouds = [];
+        this.cloudSpeed = this.config.BG_CLOUD_SPEED;
+
+        //地面
+        this.horizonLine = null;
+        this.init();
+    }
+
+    Horizon.prototype = {
+        //初始化地平面，云
+        init: function () {
+            this.addCloud();
+            this.horizonLine = new HorizonLine(this.canvas, this.spritePos.HORIZON);
+            this.nightMode = new NightMode(this.canvas, this.spritePos.MOON, this.dimensions.WIDTH);
+        },
+        update: function (deltaTime, currentSpeed, updateObstacles, showNightMode) {
+            this.runningTime += deltaTime;
+            this.horizonLine.update(deltaTime, currentSpeed);
+            this.nightMode.update(showNightMode);
+            this.updateClouds(deltaTime, currentSpeed);
+
+            if (updateObstacles) {
+                this.updateObstacles(deltaTime, currentSpeed);
+            }
+        },
+        // 添加云朵并控制其移动
+        updateClouds: function (deltaTime, speed) {
+            var cloudSpeed = this.cloudSpeed / 1000 * deltaTime * speed;
+            var numClouds = this.clouds.length;
+
+            if (numClouds) {
+                for (var i = numClouds - 1; i >= 0; i--) {
+                    this.clouds[i].update(cloudSpeed);
+                }
+                var lastCloud = this.clouds[numClouds - 1];
+                // 若当前存在的云朵数量小于最大云朵数量
+                // 并且云朵位置大于间隙时
+                // 随机添加云朵
+                // 云朵数量小于设定最大值，屏幕宽度-初始坐标大于最后一个云朵
+                if (numClouds < this.config.MAX_CLOUDS &&
+                    (this.dimensions.WIDTH - lastCloud.xPos) > lastCloud.cloudGap &&
+                    this.cloudFrequency > Math.random()) {
+                    this.addCloud();
+                }
+                // 过滤掉已经移出屏幕外的云朵
+                this.clouds = this.clouds.filter(function (obj) {
+                    return !obj.remove;
+                });
+            } else {
+                this.addCloud();
+            }
+        },
+        // 管理多个障碍物移动
+        updateObstacles: function (deltaTime, currentSpeed) {
+            //障碍物列表，保存一个障碍物副本
+            var updatedObstacles = this.obstacles.slice(0);
+
+            for (var i = 0; i < this.obstacles.length; i++) {
+                var obstacle = this.obstacles[i];
+                obstacle.update(deltaTime, currentSpeed);
+
+                // 移除被标记为删除的障碍物
+                if (obstacle.remove) {
+                    updatedObstacles.shift();
+                }
+            }
+            this.obstacles = updatedObstacles;
+
+            if (this.obstacles.length > 0) {
+                // 获取障碍物列表中的最后一个障碍物
+                var lastObstacle = this.obstacles[this.obstacles.length - 1];
+                // 若满足条件则添加障碍物
+                if (lastObstacle && !lastObstacle.followingObstacleCreated &&
+                    lastObstacle.isVisible() &&
+                    (lastObstacle.xPos + lastObstacle.width + lastObstacle.gap) <
+                    this.dimensions.WIDTH) {
+                    this.addNewObstacle(currentSpeed);
+                    lastObstacle.followingObstacleCreated = true;
+                }
+            } else {
+                // 若障碍物列表中没有障碍物则立即添加
+                this.addNewObstacle(currentSpeed);
+            }
+        },
+        removeFirstObstacle: function () {
+            this.obstacles.shift();
+        },
+        // 随机添加障碍
+        addNewObstacle: function (currentSpeed) {
+            // 随机选取一种类型的障碍
+            var obstacleTypeIndex = getRandomNum(0, Obstacle.types.length - 1);
+            var obstacleType = Obstacle.types[obstacleTypeIndex];
+// 检查随机取到的障碍物类型是否与前两个重复
+            // 或者检查其速度是否合法，这样可以保证游戏在低速时不出现翼龙
+            // 如果检查不通过则重新再选一次直到通过为止
+            if (this.duplicateObstacleCheck(obstacleType.type) || currentSpeed < obstacleType.minSpeed) {
+                this.addNewObstacle(currentSpeed);
+            } else {
+                // 检查通过后，获取该值在精灵图中的坐标
+                var obstacleSpritePos = this.spritePos[obstacleType.type];
+                // 生成新的障碍物并存入数组
+                this.obstacles.push(new Obstacle(this.ctx, obstacleType, obstacleSpritePos, this.dimensions,
+                    this.gapCoefficient, currentSpeed, obstacleType.width));
+// 同时将障碍物类型存入histo数组
+                // 该方法向数组开头添加一个或者更多元素，并返回长度
+                this.obstacleHistory.unshift(obstacleType.type);
+            }
+ // 若history数组的长度大于1，则清空最前面的两个
+            if (this.obstacleHistory.length > 1) {
+                this.obstacleHistory.splice(Runner.config.MAX_OBSTACLE_DUPLICATION);
+            }
+        },
+        // 检查障碍物是否超过允许的最大重复数
+        duplicateObstacleCheck: function (nextObstacleType) {
+            var duplicateCount = 0;
+            // 与history数组中的障碍物类型比较，最大只允许重得两次
+            for (var i = 0; i < this.obstacleHistory.length; i++) {
+                duplicateCount = this.obstacleHistory[i] == nextObstacleType ? duplicateCount + 1 : 0;
+            }
+            return duplicateCount >= Runner.config.MAX_OBSTACLE_DUPLICATION;
+        },
+        reset: function () {
+            this.obstacles = [];
+            this.horizonLine.reset();
+            this.nightMode.reset();
+        },
+        resize: function (width, height) {
+            this.canvas.width = width;
+            this.canvas.height = height;
+        },
+        // 将云朵添加至数组
+        addCloud: function () {
+            this.clouds.push(new Cloud(this.canvas, this.spritePos.CLOUD, this.dimensions.WIDTH));
+        }
+    };
+
+    // 障碍物最大间距系数
+    Obstacle.MAX_GAP_COEFFICIENT = 1.5;
+    // 每组障碍物的最大数量
+    Obstacle.MAX_OBSTACLE_LENGTH = 3;
+    // 障碍物类型列表
+    Obstacle.types = [
+        {
+            type: 'CACTUS_SMALL',//小仙人掌
+            width: 17,//宽
+            height: 35,//高
+            yPos: 105,//在画布上的y坐标
+            multipleSpeed: 4,
+            minGap: 120,//最小间距
+            minSpeed: 0,//最低速度
+            collisionBoxes: [
+                new CollisionBox(0, 7, 5, 27),
+                new CollisionBox(4, 0, 6, 34),
+                new CollisionBox(10, 4, 7, 14)
+            ]
+        },
+        {
+            type: 'CACTUS_LARGE',//大仙人掌
+            width: 25,
+            height: 50,
+            yPos: 90,
+            multipleSpeed: 7,
+            minGap: 120,
+            minSpeed: 0,
+            collisionBoxes: [
+                new CollisionBox(0, 12, 7, 38),
+                new CollisionBox(8, 0, 7, 49),
+                new CollisionBox(13, 10, 10, 38)
+            ]
+        },
+        {
+            type: 'PTERODACTYL',
+            width: 46,
+            height: 40,
+            yPos: [100, 75, 50], //  高、中、低三种高度
+            yPosMobile: [100, 50], // Variable height mobile.
+            multipleSpeed: 999,
+            minSpeed: 8.5,
+            minGap: 150,
+            // 障碍物的碰撞检测盒子
+            collisionBoxes: [
+                new CollisionBox(15, 15, 16, 5),
+                new CollisionBox(18, 21, 24, 6),
+                new CollisionBox(2, 14, 4, 3),
+                new CollisionBox(6, 10, 4, 7),
+                new CollisionBox(10, 8, 6, 9)
+            ],
+            numFrames: 2,//有两个动画帧
+            frameRate: 1000 / 6,//动画帧切换速率，这里为每秒60帧
+            speedOffset: 0.8//速度修正
+        }
+    ];
+    // dimensions 屏幕尺寸  gapCoefficient 障碍物间隙  opt_xOffset 障碍物水平偏移量
+    function Obstacle(ctx, type, spriteImgPos, dimensions, gapCoefficient, speed, opt_xOffset) {
+        this.ctx = ctx;
+        this.spritePos = spriteImgPos;
+        //障碍物类型(仙人掌、翼龙)
+        this.typeConfig = type;
+        this.gapCoefficient = gapCoefficient;
+        // 每个障碍物的数量1-3
+        this.size = getRandomNum(1, Obstacle.MAX_OBSTACLE_LENGTH);
+        this.dimensions = dimensions;
+        // 表示该障碍物是否可以被移除
+        this.remove = false;
+        // 水平坐标
+        this.xPos = dimensions.WIDTH + (opt_xOffset || 0);
+        this.yPos = 0;
+        this.width = 0;
+        this.collisionBoxes = [];
+        this.gap = 0;
+        // 速度修正
+        this.speedOffset = 0;
+
+        // 障碍物的动画帧
+        this.currentFrame = 0;
+        // 动画帧切换的计时器
+        this.timer = 0;
+
+        this.init(speed);
+    }
+
+    Obstacle.prototype = {
+        init: function (speed) {
+            this.cloneCollisionBoxes();
+            // 如果随机障碍物是翼龙，则只出现一只
+            // 翼龙的multipleSpeed是999，远大于speed
+            if (this.size > 1 && this.typeConfig.multipleSpeed > speed) {
+                this.size = 1;
+            }
+            //障碍物的总宽度等于单个障碍物的宽度乘以个数
+            this.width = this.typeConfig.width * this.size;
+            // 若障碍物的纵坐标是一个数组（不同高度的障碍物）
+            // 则随机选取一个
+            if (Array.isArray(this.typeConfig.yPos)) {
+                var yPosConfig = this.typeConfig.yPos;
+                this.yPos = yPosConfig[getRandomNum(0, yPosConfig.length - 1)];
+            } else {
+                this.yPos = this.typeConfig.yPos;
+            }
+
+            this.draw();
+            // 只针对仙人掌，复数的障碍物需要在创建时修正碰撞盒子
+            if (this.size > 1) {
+                this.collisionBoxes[1].width = this.width - this.collisionBoxes[0].width -
+                    this.collisionBoxes[2].width;
+
+                this.collisionBoxes[2].x = this.width - this.collisionBoxes[2].width;
+            }
+// 对翼龙的速度进行修正，让它看起来有的飞得快一些，有的飞的慢一些
+            if (this.typeConfig.speedOffset) {
+                this.speedOffset = Math.random() > 0.5 ? this.typeConfig.speedOffset :
+                    -this.typeConfig.speedOffset;
+            }
+            // 障碍物之间的间隙，与游戏速度有关
+            this.gap = this.getGap(this.gapCoefficient, speed);
+        },
+        draw: function () {
+            var sourceWidth = this.typeConfig.width;
+            var sourceHeight = this.typeConfig.height;
+            var sourceX = (sourceWidth * this.size) * (0.5 * (this.size - 1)) +
+                this.spritePos.x;
+
+            // Animation frames.
+            if (this.currentFrame > 0) {
+                sourceX += sourceWidth * this.currentFrame;
+            }
+            this.ctx.drawImage(imgSprite,
+                sourceX, this.spritePos.y,
+                sourceWidth * this.size, sourceHeight,
+                this.xPos, this.yPos,
+                sourceWidth * this.size, sourceHeight);
+        },
+        // 单个障碍物的移动
+        update: function (deltaTime, speed) {
+            if (!this.remove) {
+                if (this.typeConfig.speedOffset) {
+                    speed += this.speedOffset;
+                }
+                this.xPos -= Math.floor((speed * FPS / 1000) * deltaTime);
+
+                // Update frame
+                if (this.typeConfig.numFrames) {
+                    this.timer += deltaTime;
+                    if (this.timer >= this.typeConfig.frameRate) {
+                        this.currentFrame = this.currentFrame == this.typeConfig.numFrames - 1 ? 0 : this.currentFrame + 1;
+                        this.timer = 0;
+                    }
+                }
+                this.draw();
+
+                if (!this.isVisible()) {
+                    this.remove = true;
+                }
+            }
+        },
+        // 障碍物之间的间隔，gapCoefficient为间隔系数
+        getGap: function (gapCoefficient, speed) {
+            var minGap = Math.round(this.width * speed +
+                this.typeConfig.minGap * gapCoefficient);
+            var maxGap = Math.round(minGap * Obstacle.MAX_GAP_COEFFICIENT);
+            return getRandomNum(minGap, maxGap);
+        },
+        // 判断障碍物是否移出屏幕外
+        isVisible: function () {
+            return this.xPos + this.width > 0;
+        },
+        cloneCollisionBoxes: function () {
+            var collisionBoxes = this.typeConfig.collisionBoxes;
+
+            for (var i = collisionBoxes.length - 1; i >= 0; i--) {
+                this.collisionBoxes[i] = new CollisionBox(collisionBoxes[i].x,
+                    collisionBoxes[i].y, collisionBoxes[i].width,
+                    collisionBoxes[i].height);
+            }
+        }
+    };
+// 分数以及最高分记录  每达到100分就会出现闪烁特效，游戏第一次gameover时显示历史最高分。分数记录器由DistanceMeter构造函数实现
+    DistanceMeter.dimensions = {
+        WIDTH: 10,//每个字符的宽度
+        HEIGHT: 13,//每个字符的高
+        DEST_WIDTH: 11//间隙
+    };
+    DistanceMeter.yPos = [0, 13, 27, 40, 53, 67, 80, 93, 107, 120];
+    DistanceMeter.config = {
+        // 初始时记录的分数上线为5位数，即99999
+        MAX_DISTANCE_UNITS: 5,
+
+        // 每隔100米距离记录器的数字出现闪动特效
+        ACHIEVEMENT_DISTANCE: 100,
+
+        // 将移动距离转化为合理的数值所用的转化系数
+        COEFFICIENT: 0.025,
+
+        // 每250ms闪动一次
+        FLASH_DURATION: 1000 / 4,
+
+        // 闪动次数
+        FLASH_ITERATIONS: 3
+    };
+// 距离记录器
+    function DistanceMeter(canvas, spritePos, canvasWidth) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.image = imgSprite;
+        this.spritePos = spritePos;
+        // 相对坐标
+        this.x = 0;
+        this.y = 5;
+
+        this.currentDistance = 0;
+        // 最大分数
+        this.maxScore = 0;
+        // 高分榜
+        this.highScore = 0;
+        this.container = null;
+
+        this.digits = [];
+        // 是否进行闪动特效
+        this.acheivement = false;
+        this.defaultString = '';
+        // 闪动特效计时器
+        this.flashTimer = 0;
+        // 闪动计数器
+        this.flashIterations = 0;
+        this.invertTrigger = false;
+
+        this.config = DistanceMeter.config;
+        // 最大记录为万位数
+        this.maxScoreUnits = this.config.MAX_DISTANCE_UNITS;
+        this.init(canvasWidth);
+    }
+
+    DistanceMeter.prototype = {
+        // 初始化距离记录器为00000，五位数
+        init: function (width) {
+            var maxDistanceStr = '';
+
+            this.calcXPos(width);
+            this.maxScore = this.maxScoreUnits;
+            for (var i = 0; i < this.maxScoreUnits; i++) {
+                this.draw(i, 0);
+                this.defaultString += '0';
+                maxDistanceStr += '9';
+            }
+// 99999
+            this.maxScore = parseInt(maxDistanceStr);
+        },
+        // 计算出xPos
+        calcXPos: function (canvasWidth) {
+            this.x = canvasWidth - (DistanceMeter.dimensions.DEST_WIDTH *
+                (this.maxScoreUnits + 1));
+        },
+        draw: function (digitPos, value, opt_highScore) {
+            var sourceWidth = DistanceMeter.dimensions.WIDTH;
+            var sourceHeight = DistanceMeter.dimensions.HEIGHT;
+            var sourceX = DistanceMeter.dimensions.WIDTH * value;
+            var sourceY = 0;
+
+            var targetX = digitPos * DistanceMeter.dimensions.DEST_WIDTH;
+            var targetY = this.y;
+            var targetWidth = DistanceMeter.dimensions.WIDTH;
+            var targetHeight = DistanceMeter.dimensions.HEIGHT;
+
+            sourceX += this.spritePos.x;
+            sourceY += this.spritePos.y;
+
+            this.ctx.save();
+
+            if (opt_highScore) {
+                //将最高分放在当前分数的左边
+                var highScoreX = this.x - (this.maxScoreUnits * 2) *
+                    DistanceMeter.dimensions.WIDTH;
+                this.ctx.translate(highScoreX, this.y);
+            } else {
+                this.ctx.translate(this.x, this.y);
+            }
+            this.ctx.drawImage(this.image, sourceX, sourceY,
+                sourceWidth, sourceHeight,
+                targetX, targetY,
+                targetWidth, targetHeight
+            );
+            this.ctx.restore();
+        },
+        // 将像素距离转化为真实距离
+        // distance 像素距离，number真实距离
+        getActualDistance: function (distance) {
+            return distance ? Math.round(distance * this.config.COEFFICIENT) : 0;
+        },
+        // 更新距离记录器
+        update: function (deltaTime, distance) {
+            var paint = true;
+
+            if (!this.acheivement) {
+                distance = this.getActualDistance(distance);
+                // 分数超过最大分数时更新至十万位999999
+                if (distance > this.maxScore && this.maxScoreUnits == this.config.MAX_DISTANCE_UNITS) {
+                    this.maxScoreUnits++;
+                    this.maxScore = parseInt(this.maxScore + '9');
+                } else {
+                    this.distance = 0;
+                }
+
+                if (distance > 0) {
+                    // 每100距离开始闪动特效
+                    if (distance % this.config.ACHIEVEMENT_DISTANCE == 0) {
+                        // Flash score and play sound.
+                        this.acheivement = true;
+                        this.flashTimer = 0;
+                    }
+
+                    // 创建以数字0开头的字符串
+                    var distanceStr = (this.defaultString +
+                        distance).substr(-this.maxScoreUnits);
+                    this.digits = distanceStr.split('');
+                } else {
+                    this.digits = this.defaultString.split('');
+                }
+            } else {
+                //到达目标分数时闪动分数
+                if (this.flashIterations <= this.config.FLASH_ITERATIONS) {
+                    this.flashTimer += deltaTime;
+
+                    if (this.flashTimer < this.config.FLASH_DURATION) {
+                        paint = false;
+                    } else if (this.flashTimer >
+                        this.config.FLASH_DURATION * 2) {
+                        this.flashTimer = 0;
+                        this.flashIterations++;
+                    }
+                } else {
+                    this.acheivement = false;
+                    this.flashIterations = 0;
+                    this.flashTimer = 0;
+                }
+            }
+
+            // 非闪动时绘制分数
+            if (paint) {
+                for (var i = this.digits.length - 1; i >= 0; i--) {
+                    this.draw(i, parseInt(this.digits[i]));
+                }
+            }
+
+            this.drawHighScore();
+            // return playSound;
+        },
+        // 绘制高分榜
+        drawHighScore: function () {
+            this.ctx.save();
+            this.ctx.globalAlpha = 0.8;//使字符颜色看起来稍浅
+            for (var i = this.highScore.length - 1; i >= 0; i--) {
+                this.draw(i, parseInt(this.highScore[i], 10), true);
+            }
+            this.ctx.restore();
+        },
+        setHighScore: function (distance) {
+            distance = this.getActualDistance(distance);
+            var highScoreStr = (this.defaultString +
+                distance).substr(-this.maxScoreUnits);
+            // 10和11分别对应精灵图中的H，I
+            this.highScore = ['10', '11', ''].concat(highScoreStr.split(''));
+        },
+        // 重置记录器为00000
+        reset: function () {
+            this.update(0);
+            this.acheivement = false;
+        }
+    };
+
+
+    /**
+     * 碰撞检测盒子
+     *  x    {number} x坐标
+     *  y {number} y坐标
+     *  w    {number} 宽度
+     *  h    {number} 高度
+     */
+    function CollisionBox(x, y, w, h) {
+        this.x = x;
+        this.y = y;
+        this.width = w;
+        this.height = h;
+    }
+
+    function checkForCollision(obstacle, tRex, opt_canvasCtx) {
+
+        var obstacleBoxXPos = Runner.defaultDimensions.WIDTH + obstacle.xPos;
+        // 创建最外层的大盒子
+        var tRexBox = new CollisionBox(
+            tRex.xPos + 1,
+            tRex.yPos + 1,
+            tRex.config.WIDTH - 2,
+            tRex.config.HEIGHT - 2);
+        var obstacleBox = new CollisionBox(
+            obstacle.xPos + 1,
+            obstacle.yPos + 1,
+            obstacle.typeConfig.width * obstacle.size - 2,
+            obstacle.typeConfig.height - 2);
+
+        if (opt_canvasCtx) {
+            drawCollisionBoxes(opt_canvasCtx, tRexBox, obstacleBox);
+        }
+        if (boxCompare(tRexBox, obstacleBox)) {
+            var collisionBoxes = obstacle.collisionBoxes;
+            var tRexCollisionBoxes = tRex.ducking ?
+                Trex.collisionBoxes.DUCKING : Trex.collisionBoxes.RUNNING;
+
+            for (var t = 0; t < tRexCollisionBoxes.length; t++) {
+                for (var i = 0; i < collisionBoxes.length; i++) {
+                    // 修正盒子（调试框）
+                    var adjTrexBox = createAdjustedCollisionBox(tRexCollisionBoxes[t], tRexBox);
+                    var adjObstacleBox = createAdjustedCollisionBox(collisionBoxes[i], obstacleBox);
+                    var crashed = boxCompare(adjTrexBox, adjObstacleBox);
+
+                    // 绘制用于调试的框
+                    if (opt_canvasCtx) {
+                        drawCollisionBoxes(opt_canvasCtx, adjTrexBox, adjObstacleBox);
+                    }
+
+                    if (crashed) {
+                        return [adjTrexBox, adjObstacleBox];
+                    }
+                }
+            }
+        }
+        return false;
+    }
+// 修正盒子，将相对坐标转为画布坐标
+    function createAdjustedCollisionBox(box, adjustment) {
+        return new CollisionBox(
+            box.x + adjustment.x,
+            box.y + adjustment.y,
+            box.width,
+            box.height);
+    }
+
+/**
+  * 碰撞检测方法
+  * @param tRexBox {Object} 霸王龙的碰撞盒子
+  * @param obstacleBox {Object} 障碍物的碰撞盒子
+  */
+    function boxCompare(tRexBox, obstacleBox) {
+        var crashed = false;
+        var tRexBoxX = tRexBox.x;
+        var tRexBoxY = tRexBox.y;
+
+        var obstacleBoxX = obstacleBox.x;
+        var obstacleBoxY = obstacleBox.y;
+
+        // Axis-Aligned Bounding Box method.
+        if (tRexBox.x < obstacleBoxX + obstacleBox.width &&
+            tRexBox.x + tRexBox.width > obstacleBoxX &&
+            tRexBox.y < obstacleBox.y + obstacleBox.height &&
+            tRexBox.height + tRexBox.y > obstacleBox.y) {
+            crashed = true;
+        }
+
+        return crashed;
+    }
+
+    function drawCollisionBoxes(canvasCtx, tRexBox, obstacleBox) {
+        canvasCtx.save();
+        canvasCtx.lineWidth = 0.5;
+        canvasCtx.strokeStyle = '#f00';
+        canvasCtx.strokeRect(tRexBox.x + 0.5, tRexBox.y + 0.5, tRexBox.width, tRexBox.height);
+
+        canvasCtx.strokeStyle = '#0f0';
+        canvasCtx.strokeRect(obstacleBox.x + 0.5, obstacleBox.y + 0.5,
+            obstacleBox.width, obstacleBox.height);
+        canvasCtx.restore();
+    }
+
+    // 为实现图片的切换，需要一个计时器timer，并且需要知道两张图片切换的时间间隔msPerFrame。
+    // 当计时器timer的时间大于切换的时间间隔msPerFrame时，将图片切换到下一张，到达最后一张时又从第一张开始，
+    // 如此反复
+    Trex.config = {
+        DROP_VELOCITY: -5,	//下落速度
+        GRAVITY: 0.6,	//重力
+        HEIGHT: 47,	//站立时高度
+        HEIGHT_DUCK: 25,	//闪躲时高度
+        INIITAL_JUMP_VELOCITY: -10,//初始起跳速度
+        INTRO_DURATION: 1500,
+        MAX_JUMP_HEIGHT: 30,	//最大起跳高度
+        MIN_JUMP_HEIGHT: 30,	//最小起跳高度
+        SPEED_DROP_COEFFICIENT: 3,
+        SPRITE_WIDTH: 262,	//雪碧图霸王龙部分的宽度(不包含闪避动作)
+        START_X_POS: 50,	//在画布的起始位置
+        WIDTH: 44,		//站立时宽度
+        WIDTH_DUCK: 59	//闪避时宽度
+    };
+    // 恐龙状态
+    Trex.status = {
+        CRASHED: 'CRASHED',	//碰到障碍物
+        DUCKING: 'DUCKING',	//闪避
+        JUMPING: 'JUMPING',	//跳跃
+        RUNNING: 'RUNNING',	//跑动
+        WAITING: 'WAITING'	//等待
+    };
+// 恐龙眨眼间隔
+    Trex.BLINK_TIMING = 3000;
+// 为恐龙和障碍物建立碰撞盒子。游戏中为恐龙建立了6个碰撞盒子，分布在头、躯干和脚，同时它还有闪避状态：
+    Trex.collisionBoxes = {
+        DUCKING: [
+            new CollisionBox(1, 18, 55, 25)
+        ],
+        RUNNING: [
+            new CollisionBox(22, 0, 17, 16),
+            new CollisionBox(1, 18, 30, 9),
+            new CollisionBox(10, 35, 14, 8),
+            new CollisionBox(1, 24, 29, 5),
+            new CollisionBox(5, 30, 21, 4),
+            new CollisionBox(9, 34, 15, 4)
+        ]
+    };
+// 元数据，记录各个状态的动画帧和帧率
+    Trex.animFrames = {
+        WAITING: {      //待机状态
+            frames: [44, 0],//动画帧x坐标在44，0之间切换，由于在雪碧图中的y坐标是0所以不用记录
+            msPerFrame: 1000 / 3 //设置帧率为一秒三帧
+        },
+        RUNNING: {              //行走状态
+            frames: [88, 132],
+            msPerFrame: 1000 / 12
+        },
+        CRASHED: {              //坠落状态
+            frames: [220],
+            msPerFrame: 1000 / 60
+        },
+        JUMPING: {              //跳跃状态
+            frames: [0],
+            msPerFrame: 1000 / 60
+        },
+        DUCKING: {                  //躲避状态
+            frames: [262, 321],
+            msPerFrame: 1000 / 8
+        }
+    };
+
+    function Trex(canvas, spritePos) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.spritePos = spritePos;
+        this.xPos = 0;//在画布中的x坐标
+        this.yPos = 0;//在画布中的y坐标
+        //站立时的Y轴坐标
+        this.groundYPos = 0;//初始化地面的高度
+        this.currentFrame = 0;//初始化动画帧
+        this.currentAnimFrames = [];//记录当前状态的动画帧
+        this.blinkDelay = 0;//眨眼延迟(随机)
+        this.animStartTime = 0;//动画开始的时间
+        this.timer = 0;//计时器
+        this.msPerFrame = 1000 / FPS;//默认帧率
+        this.config = Trex.config;//拷贝一个配置副本方便使用
+        //当前的动作为等待状态
+        this.status = Trex.status.WAITING;
+// 为各种状态建立标识
+        this.jumping = false;	//是否跳跃
+        this.ducking = false;	//是否闪避
+        this.jumpVelocity = 0;
+        this.reachedMinHeight = false;//是否达到最小跳跃高度
+        this.speedDrop = false;//是否加速降落
+        this.jumpCount = 0;//跳跃次数
+        this.jumpspotX = 0;	//空降着陆点
+
+        this.init();
+    }
+
+    Trex.prototype = {
+        init: function () {
+            this.blinkDelay = this.setBlinkDelay();
+            this.groundYPos = Runner.defaultDimensions.HEIGHT - this.config.HEIGHT -
+                Runner.config.BOTTOM_PAD;
+            this.yPos = this.groundYPos;
+            //计算出最小起跳高度
+            this.minJumpHeight = this.groundYPos - this.config.MIN_JUMP_HEIGHT;
+            this.draw(0, 0);
+            this.update(0, Trex.status.WAITING);
+        },
+        setJumpVelocity: function (setting) {
+            this.config.INIITAL_JUMP_VELOCITY = -setting;
+            this.config.DROP_VELOCITY = -setting / 2;
+        },
+        update: function (deltaTime, opt_status) {
+            this.timer += deltaTime;
+            if (opt_status) {
+                this.status = opt_status;
+                this.currentFrame = 0;
+                //得到对应状态的帧率 e.g. WAITING 1000ms / 3fps = 333ms/fps
+                this.msPerFrame = Trex.animFrames[opt_status].msPerFrame;
+                //对应状态的动画帧 e.g. WAITING [44,0]
+                this.currentAnimFrames = Trex.animFrames[opt_status].frames;
+
+                if (opt_status == Trex.status.WAITING) {
+                    //开始计y时
+                    this.animStartTime = getTimeStamp();
+                    // 设置延时
+                    this.setBlinkDelay();
+                }
+            }
+            // 恐龙向前移动50像素
+            if (this.playingIntro && this.xPos < this.config.START_X_POS) {
+                this.xPos += Math.round((this.config.START_X_POS /
+                    this.config.INTRO_DURATION) * deltaTime);
+            }
+            // 待机状态
+            if (this.status == Trex.status.WAITING) {
+                // 执行眨眼动作
+                this.blink(getTimeStamp());
+            } else {
+                this.draw(this.currentAnimFrames[this.currentFrame], 0);
+            }
+            // 计时器超过一帧的运行时间，切换到下一帧
+            if (this.timer >= this.msPerFrame) {
+                this.currentFrame = this.currentFrame == this.currentAnimFrames.length - 1 ? 0 : this.currentFrame + 1;
+                this.timer = 0;//重置计时器
+            }
+
+            if (this.speedDrop && this.yPos == this.groundYPos) {
+                this.speedDrop = false;
+                this.setDuck(true);
+            }
+        },
+        setBlinkDelay: function () {
+            // 设置随机眨眼时间间隔
+            this.blinkDelay = Math.ceil(Math.random() * Trex.BLINK_TIMING);
+        },
+        // 只要计时器没有超过blinkDelay就不绘制新的图片，这样图片就会停留在上一次绘制的状态，
+        // 恐龙此时是睁着眼睛的。当时间超过了blinkDelay，即执行眨眼的时间到了，这时会绘制this.currentFrame这一帧。
+        // 如果这一帧是0(闭眼)，由于之前设置了this.timer >= this.msPerFrame时会切换帧，
+        // 当时间再次超过blinkDelay时，这时就会绘制帧1(睁眼)，我们看到的效果就是眼睛闭上只有一瞬然后立刻睁开了。 
+        // 如果当前帧是1(睁眼)，重新设置blinkDelay，于是在deltaTime没有超过重新设置blinkDelay的情况下，
+        // 都不会绘制新图片(始终保持在帧1(睁眼))，这样我们看到的效果就是睁眼的时间稍长。
+        blink: function (time) {
+            var deltaTime = time - this.animStartTime;
+
+            if (deltaTime >= this.blinkDelay) {
+                this.draw(this.currentAnimFrames[this.currentFrame], 0);
+
+                if (this.currentFrame == 1) {//0为闭眼，1为睁眼
+                    // 设置新的眨眼时间间隔
+                    this.setBlinkDelay();
+                    this.animStartTime = time;
+                }
+            }
+        },
+// 首先规定向下为正方向，即重力加速度(g)为正，起跳的速度(v)为负，恐龙距离画布上方的距离为yPos；
+// 每一帧动画中，速度都会与重力加速度相加得到新的速度，再用新的速度与yPos相加得到新的yPos，改变恐龙的位置为新的yPos，表现出来为yPos不断减小；
+// 当恐龙升至最高点，此时速度为0，并且仍具有向下的重力加速度。
+// 速度仍与重力加速度相加得到新的速度，此时速度方向向下，为正值，表现为yPos逐渐增加；
+// 落地，并使yPos不超过地面的高度，将速度重置为0，更新状态jumping为false。
+        startJump: function (speed) {
+            if (!this.jumping) {
+                // 切换到jump状态
+                this.update(0, Trex.status.JUMPING);
+                // 设置跳跃速度
+                this.jumpVelocity = this.config.INIITAL_JUMP_VELOCITY - (speed / 10);
+                this.jumping = true;
+                this.reachedMinHeight = false;
+                this.speedDrop = false;
+            }
+        },
+        // 小跳
+        endJump: function () {
+            if (this.reachedMinHeight && this.jumpVelocity < this.config.DROP_VELOCITY) {
+                this.jumpVelocity = this.config.DROP_VELOCITY;
+            }
+        },
+        updateJump: function (deltaTime, speed) {
+            // 帧切换速率
+            var msPerFrame = Trex.animFrames[this.status].msPerFrame;
+            // 经过的帧数
+            var framesElapsed = deltaTime / msPerFrame;
+            // 更新y轴坐标
+            if (this.speedDrop) {
+                //SPEED_DROP_COEFFICIENT为加速倍数，初始设定为3
+                this.yPos += Math.round(this.jumpVelocity *
+                    this.config.SPEED_DROP_COEFFICIENT * framesElapsed);
+            } else {
+                this.yPos += Math.round(this.jumpVelocity * framesElapsed);
+            }
+//由于速度受重力影响，需要对速度进行修正
+            this.jumpVelocity += this.config.GRAVITY * framesElapsed;
+// 达到最小跳跃高度
+//speedDrop也能触发reachedMinHeight
+            if (this.yPos < this.minJumpHeight || this.speedDrop) {
+                this.reachedMinHeight = true;
+            }
+            // 达到最大高度后停止跳跃
+            //speedDrop也能触发endJump
+            if (this.yPos < this.config.MAX_JUMP_HEIGHT || this.speedDrop) {
+                this.endJump();
+            }
+
+            if (this.yPos > this.groundYPos) {
+                this.reset();
+                this.jumpCount++;
+            }
+
+            this.update(deltaTime);
+        },
+        setSpeedDrop: function () {
+            this.speedDrop = true;
+            this.jumpVelocity = 1;//将速度设置为1，正方向
+        },
+        // 闪避方法
+        setDuck: function (isDucking) {
+            if (isDucking && this.status != Trex.status.DUCKING) {
+                this.update(0, Trex.status.DUCKING);
+                this.ducking = true;
+            } else if (this.status == Trex.status.DUCKING) {
+                this.update(0, Trex.status.RUNNING);
+                this.ducking = false;
+            }
+        },
+        draw: function (x, y) {
+            var sourceX = x;
+            var sourceY = y;
+            var sourceWidth = this.ducking && this.status != Trex.status.CRASHED ?
+                this.config.WIDTH_DUCK : this.config.WIDTH;
+            var sourceHeight = this.config.HEIGHT;
+            sourceX += this.spritePos.x;
+            sourceY += this.spritePos.y;
+
+            if (this.ducking && this.status != Trex.status.CRASHED) {
+                this.ctx.drawImage(imgSprite, sourceX, sourceY,
+                    sourceWidth, sourceHeight,
+                    this.xPos, this.yPos,
+                    this.config.WIDTH_DUCK, this.config.HEIGHT);
+            } else {
+                if (this.ducking && this.status == Trex.status.CRASHED) {
+                    this.xPos++;
+                }
+
+                this.ctx.drawImage(imgSprite, sourceX, sourceY,
+                    sourceWidth, sourceHeight,
+                    this.xPos, this.yPos,
+                    this.config.WIDTH, this.config.HEIGHT);
+            }
+        },
+        reset: function () {
+            this.yPos = this.groundYPos;
+            this.jumpVelocity = 0;
+            this.jumping = false;
+            this.ducking = false;
+            this.update(0, Trex.status.RUNNING);
+            this.midair = false;
+            this.speedDrop = false;
+            this.jumpCount = 0;
+        }
+    };
+
+
+    var now = getTimeStamp();
+
+    //不写onload方法就显示不出图片
+    window.onload = function () {
+        var runner = new Runner('.interstitial-wrapper');
+    };
+</script>
+
+
+</html>
